@@ -1,1 +1,1 @@
-# combination-triangles-plot
+# Combination Triangles Plot

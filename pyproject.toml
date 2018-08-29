@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "combination-triangles-plot"
+version = "0.1"
+authors = ["Christoph Jansen <Christoph.Jansen@htw-berlin.de>"]
+license = "AGPL-3.0"
+readme = "README.md"
+repository = "https://github.com/somnonetz/combination-triangles-plot"
+description = "Plot combination triangles in matrices."
+
+[tool.poetry.dependencies]
+python = "^3.4"
+numpy = "^1.15"
+pandas = "^0.23.4"
+matplotlib = "^2.2"
+seaborn = "^0.9.0"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+ctp = 'combination_triangles_plot.main:main'
