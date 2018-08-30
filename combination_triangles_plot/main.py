@@ -20,7 +20,7 @@ def attach_args(parser):
         'data_files', action='store', type=str, nargs='+',
         help='CSV files with three columns and a single header row. First column (index) contains the combined axis '
              'ticks. Second and third columns contain data to be plotted in lower left and upper right triangles '
-             'respectively. Each CSV file is displayed in separate subplot. Data column names provide in header row '
+             'respectively. Each CSV file is displayed in separate subplot. Data column names provided in header row '
              'are used in plot.'
     )
     parser.add_argument(
