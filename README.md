@@ -3,7 +3,7 @@
 Install:
 
 ```bash
-pip3 install --user https://github.com/somnonetz/combination-triangles-plot/releases/download/0.1/combination_triangles_plot-0.1-py3-none-any.whl
+pip3 install --user https://github.com/somnonetz/combination-triangles-plot/releases/download/0.2/combination_triangles_plot-0.2-py3-none-any.whl
 ```
 
 Run:
