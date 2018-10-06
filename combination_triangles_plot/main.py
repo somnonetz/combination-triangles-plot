@@ -72,6 +72,14 @@ def attach_args(parser):
         '--label-ur-y', action='store', type=float, metavar='LABEL_UR_Y', default=-3.5,
         help='Y position of upper right (ur) label.'
     )
+    parser.add_argument(
+        '--vmin', action='store', type=float, metavar='VMIN',
+        help='Scale minimum. Default is the minimum value across all plots.'
+    )
+    parser.add_argument(
+        '--vmax', action='store', type=float, metavar='VMAX',
+        help='Scale maximum. Default is the maximum value across all plots.'
+    )
 
 
 def main():
@@ -96,7 +104,9 @@ def run(
         label_ll_x,
         label_ll_y,
         label_ur_x,
-        label_ur_y
+        label_ur_y,
+        vmin,
+        vmax
 ):
     if len(tick_separator) > 1:
         raise Exception('expected single character as TICK_SEPARATOR')
@@ -123,6 +133,12 @@ def run(
         )
         vmin_total = min(min_lower, min_upper, vmin_total)
         vmax_total = max(max_lower, max_upper, vmax_total)
+
+    if vmin is not None:
+        vmin_total = vmin
+
+    if vmax is not None:
+        vmax_total = vmax
 
     center = 0
     cmap = 'RdBu'
